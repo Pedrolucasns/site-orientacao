@@ -10,7 +10,6 @@
 html, body {
     width: 100vw;
     height: 100vh;
-    background-color: gray;
     color: white;
     text-align: justify;
     background-size: cover;
@@ -20,20 +19,21 @@ html, body {
 
 /* Estilização de Títulos */
 h1 {
-    color: blue;
+    color: darkblue;
     text-shadow: 3px 3px 3px rgb(26, 97, 121);
     text-align: center;
     padding: 10px;
 }
 
-/* Imagem padrão (paisagem para desktops e tablets deitados) */
+/* Imagem padrão: modo paisagem (desktops, tablets e celulares deitados) */
 body {
     background-image: url('cev-landscape.jpg');
 }
 
-/* Para telas menores (modo retrato) */
-@media screen and (max-width: 1024px) and (orientation: portrait) {
+/* Para modo retrato: desktops, tablets e celulares em pé */
+@media screen and (orientation: portrait) {
     body {
         background-image: url('cev-portrait.jpg');
+        background-position: center bottom;
     }
 }
